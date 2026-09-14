@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GeoFringe — Satellite Ground-Motion Intelligence</title>
+<meta name="description" content="GeoFringe measures millimetre-scale ground motion from Sentinel-1 satellite radar: per-point subsidence and uplift velocities, validated against GNSS, for engineering, infrastructure and insurance teams.">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style>
+  :root {
+    --ink: #2f3b49; --ink-2: #566474; --ground: #f6f8f7; --card: #ffffff; --line: #d9e2e6;
+    --accent: #0f8f82; --accent-soft: #e3f4f1; --max: 1080px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink: #e8f1f5; --ink-2: #a9bcc7; --ground: #0c1a24; --card: #122532; --line: #20394a;
+            --accent: #34d1bf; --accent-soft: #123a3a; }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--ground); color: var(--ink);
+         font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+  a { color: var(--accent); }
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+  header { padding: 28px 0; }
+  .brand { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 20px; letter-spacing: .2px; }
+  .brand img { width: 40px; height: 40px; flex: none; border-radius: 8px; }
+  .hero { padding-top: 56px; padding-bottom: 72px; display: grid; grid-template-columns: 1.15fr .85fr; gap: 48px; align-items: center; }
+  .eyebrow { text-transform: uppercase; letter-spacing: .12em; font-size: 13px; font-weight: 600; color: var(--accent); }
+  h1 { font-size: clamp(34px, 5vw, 54px); line-height: 1.08; margin: 12px 0 20px; letter-spacing: -.02em; }
+  .lede { font-size: 19px; color: var(--ink-2); max-width: 36em; }
+  .cta { display: inline-block; margin-top: 28px; padding: 13px 22px; border-radius: 10px; background: var(--accent);
+         color: #fff; text-decoration: none; font-weight: 600; }
+  @media (prefers-color-scheme: dark) { .cta { color: #06201c; } }
+  .logo-card { margin: 0; background: #fff; border: 1px solid var(--line); border-radius: 22px; padding: 18px; }
+  .logo-card img { display: block; width: 100%; height: auto; }
+  section { padding: 56px 0; border-top: 1px solid var(--line); }
+  h2 { font-size: 28px; margin: 0 0 8px; letter-spacing: -.01em; }
+  .sub { color: var(--ink-2); margin: 0 0 32px; max-width: 42em; }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 22px 22px 18px; }
+  .card h3 { margin: 0 0 6px; font-size: 18px; }
+  .card p { margin: 0; color: var(--ink-2); font-size: 16px; }
+  ol.steps { list-style: none; counter-reset: s; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  ol.steps li { counter-increment: s; background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 20px; }
+  ol.steps li::before { content: counter(s); display: inline-grid; place-items: center; width: 28px; height: 28px;
+                        border-radius: 50%; background: var(--accent-soft); color: var(--accent); font-weight: 700; margin-bottom: 10px; }
+  ol.steps b { display: block; margin-bottom: 4px; }
+  ol.steps span { color: var(--ink-2); font-size: 15px; }
+  .pilot { background: var(--accent-soft); border-radius: 16px; padding: 28px; }
+  .pilot p { margin: 0; }
+  footer { padding: 36px 0 48px; color: var(--ink-2); font-size: 14px; border-top: 1px solid var(--line); }
+  footer .row { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  @media (max-width: 860px) {
+    .hero { grid-template-columns: 1fr; padding-top: 24px; }
+    .logo-card { max-width: 440px; }
+    .grid { grid-template-columns: 1fr; }
+    ol.steps { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 520px) { ol.steps { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap brand" aria-label="GeoFringe">
+    <img src="/logo-mark.png" width="40" height="40" alt="">
+    GeoFringe
+  </div>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <div>
+      <div class="eyebrow">Satellite Ground-Motion Intelligence</div>
+      <h1>See the ground move, millimetre by millimetre.</h1>
+      <p class="lede">GeoFringe turns Sentinel-1 satellite radar into point-by-point ground-motion measurements:
+        how fast buildings, roads, pipelines and levees are sinking or rising, with an uncertainty on every number,
+        for engineering, infrastructure and insurance teams.</p>
+      <a class="cta" href="mailto:info@geofringe.com?subject=GeoFringe%20pilot">Talk to us about a pilot</a>
+    </div>
+    <figure class="logo-card"><img src="/logo-lockup.jpg" width="1200" height="890" alt="GeoFringe: Satellite Ground-Motion Intelligence"></figure>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <h2>What you get</h2>
+      <p class="sub">A measurement product, not a pretty map: every point carries its velocity, its uncertainty and a
+        time series you can check against your own surveys.</p>
+      <div class="grid">
+        <div class="card"><h3>Per-point velocities</h3><p>Line-of-sight motion in millimetres per year for buildings,
+          infrastructure and open ground, with a one-sigma uncertainty on each point.</p></div>
+        <div class="card"><h3>Full history</h3><p>Displacement time series from 2019 onwards, so you can see when
+          movement started, whether it is accelerating and how it follows the seasons.</p></div>
+        <div class="card"><h3>Validated against GNSS</h3><p>Results are tied to and checked against permanent GNSS
+          stations, and each delivery ships with a quality report that shows its own error statistics.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Where it helps</h2>
+      <div class="grid">
+        <div class="card"><h3>Infrastructure owners</h3><p>Screen pipelines, roads, rail, levees and utilities for
+          subsidence before it becomes a repair bill.</p></div>
+        <div class="card"><h3>Engineering and construction</h3><p>Baseline a site before works, and watch dewatering
+          or tunnelling effects on the buildings around it.</p></div>
+        <div class="card"><h3>Insurance and real estate</h3><p>Understand ground-movement exposure across a portfolio
+          with evidence, not assumptions.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>How it works</h2>
+      <p class="sub">Sentinel-1 satellites image the same place every 6 to 12 days. Tiny phase differences between
+        passes reveal how the ground has moved.</p>
+      <ol class="steps">
+        <li><b>Radar archive</b><span>Years of Sentinel-1 acquisitions over your area.</span></li>
+        <li><b>Scatterer analysis</b><span>Stable points and homogeneous areas are measured through time.</span></li>
+        <li><b>GNSS tie</b><span>Motion is expressed in a real reference frame and checked against GNSS.</span></li>
+        <li><b>Delivery</b><span>Points, time series and a quality report you can audit.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="pilot">
+        <h2>Houston pilot</h2>
+        <p>Our first pilot covers the Houston area, where decades of groundwater withdrawal have made subsidence a
+          measured, regulated issue, and where a dense GNSS network lets us validate every result independently.
+          We are working with a small number of design partners.
+          <a href="mailto:info@geofringe.com?subject=GeoFringe%20design%20partner">Get in touch</a> if you would like to be one of them.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap row">
+    <span>&copy; 2026 GeoFringe &middot; <a href="mailto:info@geofringe.com">info@geofringe.com</a></span>
+    <span>Built on Copernicus Sentinel-1 data (ESA / European Union).</span>
+  </div>
+</footer>
+</body>
+</html>
